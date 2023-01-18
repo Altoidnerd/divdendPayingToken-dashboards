@@ -1,0 +1,252 @@
+/*******************************************************
+ * Copyright (C) 2021-2031 SAS Solicity | solicity.company@gmail.com
+ *******************************************************/
+ 
+@import "../../styles/grid.scss";
+
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 1.5em;
+}
+
+.buy-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #7b0d29;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);    
+    border-radius: 5px;
+    transition: 0.5s;
+    
+    &:hover{
+        transition: 0.5s;
+        transform: scale(1.02);
+        cursor: pointer;
+    }
+
+    .cardIcon{
+        width: 24px;
+        aspect-ratio: 1;
+        margin-right: 10px;
+    }
+    .arrowIcon{
+        width: 16px;
+        aspect-ratio: 1;
+        margin-left: 1em;
+    }
+}
+
+.info-col{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100px;
+    background: #922842;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    .col{
+        p{
+            color: white;
+            font-size: 14px;
+        }
+        span{
+            color: #41AF67;
+        }
+        #AdaValue{
+            color: #c3ffdb;
+            font-size: 18px;
+        }
+    }
+    h1{
+        color: #e49aa2;
+        font-size: 14px;
+        margin: 0;
+    }
+
+    @include sm{
+        margin-top: 1rem;
+    }
+    
+    @include md{
+        margin-top: 1rem;
+    }
+
+    .icon-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        aspect-ratio: 1.14;
+        background: white;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: 100px;
+
+        &-orange{
+            background: #e36c6c;
+        }
+        &-green{
+            background: #e36c6c;
+        }
+        &-blue{
+            background: #e36c6c;
+        }
+        &-pink{
+            background: #FF6464;
+        }
+
+        .info-icon{
+            width: 30px;
+            aspect-ratio: 1;
+        }
+
+        #ada-icon{
+            width: 50px;
+            aspect-ratio: 1;
+        }
+    }
+}
+
+.info-row{
+    padding-top: 1rem;
+    
+    @include sm{
+        flex-direction: column;
+    }
+    @include md{
+        flex-direction: column;
+    }
+}
+
+#btn-row{
+    padding-left: 5px;
+    padding-right: 5px;
+
+    @include sm{
+        justify-content: space-between;
+    }
+}
+
+#ada-info{
+    padding-top: 1rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    .adaLogo{
+        vertical-align: middle;
+        aspect-ratio: 1;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        margin-bottom: 1.5em;
+        margin-top: 1em;
+    }
+    #adaAllRewards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2em;
+        h1{
+            color: white;
+            font-weight: normal;
+            font-size: 28px;
+            text-align: center;
+            span{
+                color: #e49aa2;
+                font-weight: bold;
+            }
+        }
+
+        .adaRewardsDol{
+            font-size: 32px;
+            color: #f3abab;
+            font-weight: bold;
+        }
+    }
+}
+
+#ConnectBtn{
+    display: none;
+    background: #e36c6c;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    transition: 0.5s;
+
+    @include sm{
+        display: flex;
+    }
+
+    &:hover{
+        transition: 0.5s;
+        transform: scale(1.02);
+        cursor: pointer;
+    }
+}
+
+
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear;
+  }
+
+.Loading{
+    position: fixed;
+    background: #c997a3;
+    z-index: 10000!important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logoWait{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+#lastPayout{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}

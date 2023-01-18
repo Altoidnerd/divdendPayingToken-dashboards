@@ -1,0 +1,104 @@
+/*******************************************************
+ * Copyright (C) 2021-2031 SAS Solicity | solicity.company@gmail.com
+ * 
+ * This file is part of TimeToken - Developement.
+ * 
+ * TimeToken - Developement can not be copied and/or distributed without the express
+ * permission of @CrossRiverSG
+ *******************************************************/
+ 
+$col-nb: 12;
+$md-width: 768px ;
+$lg-width: 992px;
+$xl-width: 1200px;
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+@mixin sm {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+  }
+  
+  @mixin md {
+    @media screen and (min-width: 769px) and (max-width: 992px) {
+        @content;
+    }
+  }
+  
+  @mixin lg {
+    @media screen and (min-width: 993px) and (max-width: 1199px) {
+        @content;
+    }
+  }
+  
+  @mixin xl {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+  }
+  
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        flex-basis: calc(100% / ( #{$col-nb / $i }));
+        width: calc(100% / ( #{$col-nb / $i }));
+    }
+
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+@media screen and (max-width: $md-width){
+    
+    @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            flex-basis: calc(100% / ( #{$col-nb / $i }));
+            width: calc(100% / ( #{$col-nb / $i }));
+        }
+    }
+    
+}
+
+@media screen and (min-width: $md-width + 1px) and (max-width: $lg-width){
+
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            flex-basis: calc(100% / ( #{$col-nb / $i }));
+            width: calc(100% / ( #{$col-nb / $i }));
+        }
+    }
+
+}
+
+@media screen and (min-width: $lg-width + 1px) and (max-width: $xl-width){
+
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            flex-basis: calc(100% / ( #{$col-nb / $i }));
+            width: calc(100% / ( #{$col-nb / $i }));
+        }
+    }
+
+}
+
+
+@media screen and (min-width: $xl-width ){
+
+    @for $i from 1 through 12 {
+        .col-xl-#{$i} {
+            flex-basis: calc(100% / ( #{$col-nb / $i }));
+            width: calc(100% / ( #{$col-nb / $i }));
+        }
+    }
+}
+
+

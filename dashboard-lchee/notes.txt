@@ -1,0 +1,16 @@
+https://poocoin.app/tokens/0x86d6404c5fe697866a14968bba81eb18d1af5f4e
+
+lchee ca: 0x86d6404c5fe697866a14968bba81eb18d1af5f4e
+
+lchee dividend tracker: 0x6fd803f2a876c2d67774a9388a6ea7eb8c81bec2
+
+lp: 0x81F27857E5e1CCaF9CCA897d52383E11D9f73479
+
+ltc: 0x4338665cbb7b2485a8855a139b75d5e34ab0db94
+
+
+lightpink  #e49aa2
+button pink #e36c6c
+dark pink #db646b
+maroon #7b0d29
+yellow #f1ba62
